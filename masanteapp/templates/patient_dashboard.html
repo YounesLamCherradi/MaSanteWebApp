@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مَصِحَتي - لوحة المريض</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'patient_dashboard.css' %}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"> <img src="/static/masante.png" alt="شعار مَصِحَتي">
+                <h2>صحتي</h2>
+            </div>
+            <div class="sidebar-user"> <img src="/static/systeeem.jpg" alt="صورة المستخدم">
+                <div class="user-info">
+                    <h3>سارة جونسون</h3>
+                    <p>رقم التعريف: MS-24501</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li> <a href="#" class="active"> <i class="fas fa-home"></i> <span>الرئيسية</span> </a> </li>
+                <li> <a href="#"> <i class="fas fa-calendar-alt"></i> <span>المواعيد</span> </a> </li>
+                <li> <a href="#"> <i class="fas fa-file-medical"></i> <span>السجلات الطبية</span> </a> </li>
+                <li> <a href="#"> <i class="fas fa-prescription"></i> <span>الوصفات الطبية</span> </a> </li>
+            </ul>
+            <div class="logout"> <a href="#"> <i class="fas fa-sign-out-alt"></i> <span>تسجيل الخروج</span> </a> </div>
+        </aside>
+        <main class="main-content">
+            <div class="page-header">
+                <h1>مرحباً بعودتك، سارة!</h1> <a href="#" class="btn btn-primary"> <i class="fas fa-calendar-plus"></i>
+                    حجز موعد جديد </a>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"> <i class="fas fa-calendar-alt"></i> </div>
+                    <h3 class="feature-title">إدارة المواعيد</h3>
+                    <p class="feature-desc"> عرض أو إعادة جدولة أو إلغاء مواعيدك الطبية القادمة. احصل على تذكيرات وسجّل
+                        الحضور عبر الإنترنت. </p>
+                    <div class="feature-action"> <a href="#" class="btn btn-outline">عرض المواعيد</a> </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"> <i class="fas fa-file-medical"></i> </div>
+                    <h3 class="feature-title">السجلات الطبية</h3>
+                    <p class="feature-desc"> الوصول بشكل آمن إلى سجلك الطبي الكامل، ونتائج المختبر، والتشخيصات، وخطط
+                        العلاج. </p>
+                    <div class="feature-action"> <a href="#" class="btn btn-outline">عرض السجلات</a> </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"> <i class="fas fa-user-md"></i> </div>
+                    <h3 class="feature-title">حجز المواعيد</h3>
+                    <p class="feature-desc"> جدولة مواعيد جديدة مع الأخصائيين، أو الأطباء العامين، أو لإجراءات محددة.
+                    </p>
+                    <div class="feature-action"> <a href="#" class="btn btn-outline">احجز الآن</a> </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"> <i class="fas fa-pills"></i> </div>
+                    <h3 class="feature-title">إدارة الوصفات الطبية</h3>
+                    <p class="feature-desc"> عرض الوصفات الطبية النشطة، وطلب إعادة تعبئتها، وضبط تذكيرات الأدوية
+                        لعلاجاتك. </p>
+                    <div class="feature-action"> <a href="#" class="btn btn-outline">إدارة الوصفات الطبية</a> </div>
+                </div>
+            </div>
+            <div class="scan-section">
+                <div class="scan-header">
+                    <h2>مسح الوصفة الطبية</h2>
+                </div>
+                <div class="scan-area">
+                    <div class="scan-icon"> <i class="fas fa-camera"></i> </div>
+                    <p class="scan-text">التقط صورة أو قم بتحميل صورة وصفتك الطبية</p> <a href="#"
+                        class="btn btn-primary"> <i class="fas fa-camera"></i> المسح الآن </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

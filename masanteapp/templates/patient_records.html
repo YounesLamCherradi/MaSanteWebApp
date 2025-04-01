@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صِحَتي - السجلات الطبية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'patient_records.css' %}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/static/masante.png" alt="شعار مَصِحَتي">
+                <h2>صحتي</h2>
+            </div>
+            <div class="sidebar-user">
+                <img src="/static/systeeem.jpg" alt="صورة المستخدم">
+                <div class="user-info">
+                    <h3>سارة جونسون</h3>
+                    <p>رقم التعريف: MS-24501</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>المواعيد</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-file-medical"></i>
+                        <span>السجلات الطبية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-prescription"></i>
+                        <span>الوصفات الطبية</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>السجلات الطبية</h1>
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-download"></i> تحميل السجل الكامل
+                </a>
+            </div>
+
+            <div class="records-container">
+                <div class="records-filter">
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option value="">جميع الأطباء</option>
+                            <option value="dr-ahmad">د. أحمد محمد</option>
+                            <option value="dr-sara">د. سارة الخالد</option>
+                            <option value="dr-nasser">د. ناصر العبدالله</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="">جميع التخصصات</option>
+                            <option value="cardiology">أمراض القلب</option>
+                            <option value="dermatology">الأمراض الجلدية</option>
+                            <option value="orthopedics">جراحة العظام</option>
+                            <option value="general">طب عام</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="">جميع الفترات</option>
+                            <option value="last-month">الشهر الماضي</option>
+                            <option value="last-6months">آخر 6 أشهر</option>
+                            <option value="last-year">العام الماضي</option>
+                        </select>
+                    </div>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="بحث عن السجلات...">
+                    </div>
+                </div>
+
+                <div class="records-grid">
+                    <div class="record-card">
+                        <div class="record-header">
+                            <div class="record-info">
+                                <h3>فحص دوري للقلب</h3>
+                                <div class="record-doctor">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>د. أحمد محمد - أمراض القلب</span>
+                                </div>
+                                <div class="record-date">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <span>15 فبراير 2025</span>
+                                </div>
+                            </div>
+                            <span class="record-status status-positive">نتائج طبيعية</span>
+                        </div>
+                        <div class="record-body">
+                            <p>تم إجراء فحص شامل للقلب وتخطيط كهربائية القلب (ECG). جميع النتائج ضمن المعدلات الطبيعية.
+                                ضغط الدم 120/80، معدل ضربات القلب 72 نبضة في الدقيقة. المستويات الكيميائية في الدم ضمن
+                                المعدلات المقبولة.</p>
+                        </div>
+                        <div class="record-footer">
+                            <div class="record-tags">
+                                <span class="record-tag">فحص دوري</span>
+                                <span class="record-tag">قلب</span>
+                                <span class="record-tag">ECG</span>
+                            </div>
+                            <div class="record-actions">
+                                <a href="#">
+                                    عرض التفاصيل <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="record-card">
+                        <div class="record-header">
+                            <div class="record-info">
+                                <h3>استشارة طبية للحساسية الجلدية</h3>
+                                <div class="record-doctor">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>د. سارة الخالد - الأمراض الجلدية</span>
+                                </div>
+                                <div class="record-date">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <span>3 يناير 2025</span>
+                                </div>
+                            </div>
+                            <span class="record-status status-follow">متابعة مطلوبة</span>
+                        </div>
+                        <div class="record-body">
+                            <p>تم تشخيص إصابة المريض بالتهاب جلدي تحسسي في منطقة الذراعين والرقبة. تم وصف كريم موضعي
+                                يحتوي على كورتيكوستيرويد للاستخدام مرتين يومياً. يُنصح بتجنب استخدام العطور ومنتجات
+                                التنظيف القوية. متابعة بعد أسبوعين لتقييم الاستجابة للعلاج.</p>
+                        </div>
+                        <div class="record-footer">
+                            <div class="record-tags">
+                                <span class="record-tag">حساسية</span>
+                                <span class="record-tag">جلدية</span>
+                                <span class="record-tag">استشارة</span>
+                            </div>
+                            <div class="record-actions">
+                                <a href="#">
+                                    عرض التفاصيل <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="record-card">
+                        <div class="record-header">
+                            <div class="record-info">
+                                <h3>أشعة سينية للكتف الأيمن</h3>
+                                <div class="record-doctor">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>د. ناصر العبدالله - جراحة العظام</span>
+                                </div>
+                                <div class="record-date">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <span>27 ديسمبر 2024</span>
+                                </div>
+                            </div>
+                            <span class="record-status status-warning">تحتاج للعلاج</span>
+                        </div>
+                        <div class="record-body">
+                            <p>تُظهر الأشعة السينية التهاب في أوتار الكتف (التهاب اللفافة المدورة). لا توجد كسور أو خلع.
+                                يُنصح بالراحة وتجنب الحركات المؤلمة والعلاج الطبيعي. تم وصف مضادات التهاب غير ستيرويدية
+                                لتخفيف الألم والالتهاب.</p>
+                        </div>
+                        <div class="record-footer">
+                            <div class="record-tags">
+                                <span class="record-tag">أشعة</span>
+                                <span class="record-tag">كتف</span>
+                                <span class="record-tag">التهاب</span>
+                            </div>
+                            <div class="record-actions">
+                                <a href="#">
+                                    عرض التفاصيل <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="record-card">
+                        <div class="record-header">
+                            <div class="record-info">
+                                <h3>فحص مخبري شامل</h3>
+                                <div class="record-doctor">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>د. محمد الفيصل - طب عام</span>
+                                </div>
+                                <div class="record-date">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <span>10 نوفمبر 2024</span>
+                                </div>
+                            </div>
+                            <span class="record-status status-warning">تحتاج للمتابعة</span>
+                        </div>
+                        <div class="record-body">
+                            <p>نتائج الفحص المخبري تظهر انخفاض طفيف في مستويات فيتامين د وارتفاع بسيط في مستوى
+                                الكوليسترول. جميع قيم الكبد والكلى ضمن المعدلات الطبيعية. يُنصح بتناول مكملات فيتامين د
+                                واتباع نظام غذائي منخفض الدهون مع زيادة النشاط البدني.</p>
+                        </div>
+                        <div class="record-footer">
+                            <div class="record-tags">
+                                <span class="record-tag">فحص مخبري</span>
+                                <span class="record-tag">كوليسترول</span>
+                                <span class="record-tag">فيتامين د</span>
+                            </div>
+                            <div class="record-actions">
+                                <a href="#">
+                                    عرض التفاصيل <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="record-card">
+                        <div class="record-header">
+                            <div class="record-info">
+                                <h3>استشارة طبية للصداع النصفي</h3>
+                                <div class="record-doctor">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>د. فاطمة الزهراء - أعصاب</span>
+                                </div>
+                                <div class="record-date">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <span>5 أكتوبر 2024</span>
+                                </div>
+                            </div>
+                            <span class="record-status status-follow">متابعة جارية</span>
+                        </div>
+                        <div class="record-body">
+                            <p>تم تشخيص المريض بالصداع النصفي (الشقيقة) مع أعراض تشمل الصداع الشديد، الحساسية للضوء
+                                والصوت، والغثيان. تم وصف أدوية وقائية وأخرى لتخفيف النوبات الحادة. يُنصح بتجنب المثيرات
+                                المحتملة مثل بعض الأطعمة والتوتر وقلة النوم.</p>
+                        </div>
+                        <div class="record-footer">
+                            <div class="record-tags">
+                                <span class="record-tag">صداع نصفي</span>
+                                <span class="record-tag">أعصاب</span>
+                                <span class="record-tag">شقيقة</span>
+                            </div>
+                            <div class="record-actions">
+                                <a href="#">
+                                    عرض التفاصيل <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#"><i class="fas fa-chevron-left"></i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

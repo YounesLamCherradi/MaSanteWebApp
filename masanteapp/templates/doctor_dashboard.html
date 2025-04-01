@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحتي - لوحة تحكم الطبيب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'doctor_dashboard.css' %}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/static/masante.png" alt="شعار صحتي">
+                <h2>صحتي</h2>
+            </div>
+            <div class="sidebar-user">
+                <img src="/static/" alt="صورة الطبيب">
+                <div class="user-info">
+                    <h3>د. محمد شن</h3>
+                    <p>معرف: MS-1024</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-home"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-injured"></i>
+                        <span>المرضى</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>المواعيد</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-medical"></i>
+                        <span>السجلات الطبية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-prescription"></i>
+                        <span>الوصفات الطبية</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>مرحباً بعودتك، د. شن!</h1>
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> موعد جديد
+                </a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <div class="stat-title">مرضى اليوم</div>
+                    <div class="stat-value">12</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-title">المواعيد</div>
+                    <div class="stat-value">8</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="stat-title">المراجعات المعلقة</div>
+                    <div class="stat-value">5</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-prescription"></i>
+                    </div>
+                    <div class="stat-title">الوصفات الطبية</div>
+                    <div class="stat-value">27</div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3 class="feature-title">إدارة المرضى</h3>
+                    <p class="feature-desc">
+                        عرض ملفات المرضى والتاريخ الطبي وتحديث السجلات وإدارة خطط العلاج. الوصول إلى جميع معلومات المريض
+                        في مكان واحد.
+                    </p>
+                    <div class="feature-action">
+                        <a href="#" class="btn btn-outline">إدارة المرضى</a>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="feature-title">جدولة المواعيد</h3>
+                    <p class="feature-desc">
+                        جدولة المواعيد أو إعادة جدولتها أو إلغائها. عرض التقويم اليومي أو الأسبوعي أو الشهري بلمحة
+                        سريعة.
+                    </p>
+                    <div class="feature-action">
+                        <a href="#" class="btn btn-outline">عرض الجدول</a>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <h3 class="feature-title">السجلات الطبية</h3>
+                    <p class="feature-desc">
+                        الوصول وتحديث السجلات الطبية للمرضى ونتائج المختبر والتقارير التشخيصية وتاريخ العلاج.
+                    </p>
+                    <div class="feature-action">
+                        <a href="#" class="btn btn-outline">الوصول للسجلات</a>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-prescription"></i>
+                    </div>
+                    <h3 class="feature-title">إدارة الوصفات الطبية</h3>
+                    <p class="feature-desc">
+                        إنشاء وتحديث وإدارة الوصفات الطبية للمرضى. تتبع تاريخ الأدوية وضبط التذكيرات.
+                    </p>
+                    <div class="feature-action">
+                        <a href="#" class="btn btn-outline">إدارة الوصفات</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="patients-section">
+                <div class="section-header">
+                    <h2 class="section-title">مواعيد اليوم</h2>
+                    <a class="section-action">عرض الكل</a>
+                </div>
+
+                <table class="patient-list">
+                    <thead>
+                        <tr>
+                            <th>المريض</th>
+                            <th>الوقت</th>
+                            <th>السبب</th>
+                            <th>الحالة</th>
+                            <th>الإجراء</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="patient-info">
+                                    <img src="/api/placeholder/35/35" alt="المريض" class="patient-avatar">
+                                    <span class="patient-name">سارة جونسون</span>
+                                </div>
+                            </td>
+                            <td>09:30 ص</td>
+                            <td>فحص سنوي</td>
+                            <td><span class="status-pill status-active">نشط</span></td>
+                            <td><span class="patient-action">عرض التفاصيل</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="patient-info">
+                                    <img src="/api/placeholder/35/35" alt="المريض" class="patient-avatar">
+                                    <span class="patient-name">جيمس ويلسون</span>
+                                </div>
+                            </td>
+                            <td>10:15 ص</td>
+                            <td>متابعة</td>
+                            <td><span class="status-pill status-scheduled">مجدول</span></td>
+                            <td><span class="patient-action">عرض التفاصيل</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="patient-info">
+                                    <img src="/api/placeholder/35/35" alt="المريض" class="patient-avatar">
+                                    <span class="patient-name">إيملي باركر</span>
+                                </div>
+                            </td>
+                            <td>11:45 ص</td>
+                            <td>تجديد وصفة طبية</td>
+                            <td><span class="status-pill status-waiting">في الانتظار</span></td>
+                            <td><span class="patient-action">عرض التفاصيل</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="patient-info">
+                                    <img src="/api/placeholder/35/35" alt="المريض" class="patient-avatar">
+                                    <span class="patient-name">مايكل براون</span>
+                                </div>
+                            </td>
+                            <td>01:30 م</td>
+                            <td>استشارة</td>
+                            <td><span class="status-pill status-scheduled">مجدول</span></td>
+                            <td><span class="patient-action">عرض التفاصيل</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="patient-info">
+                                    <img src="/api/placeholder/35/35" alt="المريض" class="patient-avatar">
+                                    <span class="patient-name">أوليفيا تومسون</span>
+                                </div>
+                            </td>
+                            <td>03:00 م</td>
+                            <td>مراجعة نتائج الفحوصات</td>
+                            <td><span class="status-pill status-scheduled">مجدول</span></td>
+                            <td><span class="patient-action">عرض التفاصيل</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.sidebar-menu a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

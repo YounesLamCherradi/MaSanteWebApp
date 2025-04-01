@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مَصِحَتي - قائمة الأطباء المتاحين</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'patient_booking.css' %}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/static/masante.png" alt="شعار مَصِحَتي">
+                <h2>صحتي</h2>
+            </div>
+            <div class="sidebar-user">
+                <img src="/static/systeeem.jpg" alt="صورة المستخدم">
+                <div class="user-info">
+                    <h3>سارة جونسون</h3>
+                    <p>رقم التعريف: MS-24501</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>المواعيد</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-medical"></i>
+                        <span>السجلات الطبية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-prescription"></i>
+                        <span>الوصفات الطبية</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>الأطباء المتاحين</h1>
+                <div>
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-calendar-day"></i> الخميس، 20 مارس 2025
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctors-list">
+                <div class="doctor-list-header">
+                    <div>الطبيب</div>
+                    <div>التخصص</div>
+                    <div>الأوقات المتاحة</div>
+                    <div>المكان</div>
+                    <div>الحجز</div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-name">
+                        <img src="/api/placeholder/40/40" alt="د. أحمد خالد" class="doctor-avatar">
+                        <span>د. أحمد خالد</span>
+                    </div>
+                    <div class="doctor-specialty">طب القلب</div>
+                    <div class="doctor-slots">
+                        <span class="time-slot">9:00</span>
+                        <span class="time-slot">10:30</span>
+                        <span class="time-slot">12:00</span>
+                    </div>
+                    <div>الدار البيضاء</div>
+                    <div>
+                        <a href="#" class="btn btn-primary">حجز</a>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-name">
+                        <img src="/api/placeholder/40/40" alt="د. سارة محمد" class="doctor-avatar">
+                        <span>د. سارة محمد</span>
+                    </div>
+                    <div class="doctor-specialty">الأمراض الجلدية</div>
+                    <div class="doctor-slots">
+                        <span class="time-slot">11:00</span>
+                        <span class="time-slot">1:30</span>
+                    </div>
+                    <div>الرباط</div>
+                    <div>
+                        <a href="#" class="btn btn-primary">حجز</a>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-name">
+                        <img src="/api/placeholder/40/40" alt="د. خالد إبراهيم" class="doctor-avatar">
+                        <span>د. خالد إبراهيم</span>
+                    </div>
+                    <div class="doctor-specialty">العظام</div>
+                    <div class="doctor-slots">
+                        <span class="time-slot">9:30</span>
+                        <span class="time-slot">12:30</span>
+                        <span class="time-slot">2:00</span>
+                    </div>
+                    <div>سلا</div>
+                    <div>
+                        <a href="#" class="btn btn-primary">حجز</a>
+                    </div>
+                </div>
+
+                <div id="bookingModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>حجز موعد</h3>
+                            <span class="close-modal">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <div class="doctor-info">
+                                <img src="/api/placeholder/60/60" alt="صورة الطبيب" class="doctor-modal-avatar">
+                                <div>
+                                    <h4 id="modalDoctorName">د. أحمد خالد</h4>
+                                    <p id="modalDoctorSpecialty">طب القلب</p>
+                                </div>
+                            </div>
+
+                            <div class="booking-date">
+                                <h4>التاريخ المحدد</h4>
+                                <p>الخميس، 20 مارس 2025</p>
+                            </div>
+
+                            <div class="available-slots">
+                                <h4>اختر وقت الموعد</h4>
+                                <div class="slots-grid">
+                                    <div class="slot">9:00 صباحًا</div>
+                                    <div class="slot">10:30 صباحًا</div>
+                                    <div class="slot">12:00 ظهرًا</div>
+                                    <div class="slot">1:30 ظهرًا</div>
+                                    <div class="slot">2:00 ظهرًا</div>
+                                </div>
+                            </div>
+
+                            <div class="appointment-notes">
+                                <h4>ملاحظات (اختياري)</h4>
+                                <textarea placeholder="أضف أي ملاحظات إضافية هنا..."></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary">إلغاء</button>
+                            <button class="btn btn-primary confirm-booking">تأكيد الحجز</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <script>
+                    const modal = document.getElementById("bookingModal");
+
+                    const btns = document.querySelectorAll(".btn-primary");
+
+                    const span = document.querySelector(".close-modal");
+
+                    const cancelBtn = document.querySelector(".btn-secondary");
+
+                    const slots = document.querySelectorAll(".slot");
+
+                    btns.forEach(btn => {
+                        btn.onclick = function (e) {
+                            e.preventDefault();
+
+                            const doctorItem = this.closest('.doctor-item');
+                            const doctorName = doctorItem.querySelector('.doctor-name span').textContent;
+                            const doctorSpecialty = doctorItem.querySelector('.doctor-specialty').textContent;
+
+                            document.getElementById('modalDoctorName').textContent = doctorName;
+                            document.getElementById('modalDoctorSpecialty').textContent = doctorSpecialty;
+
+                            modal.style.display = "block";
+                        }
+                    });
+
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    cancelBtn.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                    slots.forEach(slot => {
+                        slot.onclick = function () {
+                            slots.forEach(s => s.classList.remove('selected'));
+
+                            this.classList.add('selected');
+                        }
+                    });
+
+                    document.querySelector('.confirm-booking').onclick = function () {
+                        const selectedSlot = document.querySelector('.slot.selected');
+
+                        if (selectedSlot) {
+                            alert('تم حجز موعدك بنجاح في الساعة ' + selectedSlot.textContent);
+                            modal.style.display = "none";
+                        } else {
+                            alert('الرجاء اختيار وقت للموعد');
+                        }
+                    }
+                </script>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مَصِحَتي - إدارة المواعيد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'patient_management.css' %}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/static/masante.png" alt="شعار مَصِحَتي">
+                <h2>صحتي</h2>
+            </div>
+            <div class="sidebar-user">
+                <img src="/static/systeeem.jpg" alt="صورة المستخدم">
+                <div class="user-info">
+                    <h3>سارة جونسون</h3>
+                    <p>رقم التعريف: MS-24501</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>المواعيد</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-medical"></i>
+                        <span>السجلات الطبية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-prescription"></i>
+                        <span>الوصفات الطبية</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>إدارة المواعيد</h1>
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-calendar-plus"></i> حجز موعد جديد
+                </a>
+            </div>
+
+            <div class="appointments-section">
+                <div class="section-header">
+                    <h2>المواعيد القادمة</h2>
+                    <a href="#" class="btn btn-outline">عرض الكل</a>
+                </div>
+
+                <div class="appointment-list">
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">23 مارس، 2025 - 10:30 صباحاً</div>
+                            <div class="appointment-doctor">د. أحمد السيد</div>
+                            <div class="appointment-type">طب عام - فحص روتيني</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">28 مارس، 2025 - 2:00 مساءً</div>
+                            <div class="appointment-doctor">د. ليلى محمد</div>
+                            <div class="appointment-type">طب الأسنان - فحص وتنظيف</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">5 أبريل، 2025 - 9:15 صباحاً</div>
+                            <div class="appointment-doctor">د. كريم حسن</div>
+                            <div class="appointment-type">أمراض القلب - متابعة</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">10 أبريل، 2025 - 11:00 صباحاً</div>
+                            <div class="appointment-doctor">د. منى عبدالله</div>
+                            <div class="appointment-type">طب العيون - فحص النظر</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">15 أبريل، 2025 - 3:30 مساءً</div>
+                            <div class="appointment-doctor">د. سمير علي</div>
+                            <div class="appointment-type">طب العظام - استشارة</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-lungs"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">22 أبريل، 2025 - 12:45 مساءً</div>
+                            <div class="appointment-doctor">د. هدى الشريف</div>
+                            <div class="appointment-type">أمراض الصدر - فحص متابعة</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">27 أبريل، 2025 - 9:00 صباحاً</div>
+                            <div class="appointment-doctor">د. محمد يوسف</div>
+                            <div class="appointment-type">طب الأعصاب - تشخيص</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">3 مايو، 2025 - 10:00 صباحاً</div>
+                            <div class="appointment-doctor">د. فاطمة يوسف</div>
+                            <div class="appointment-type">التحاليل الطبية - فحص دم شامل</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-date">9 مايو، 2025 - 1:15 مساءً</div>
+                            <div class="appointment-doctor">د. عمر خالد</div>
+                            <div class="appointment-type">الأشعة - فحص رنين مغناطيسي</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="action-btn" title="إعادة جدولة">
+                                <i class="fas fa-clock"></i>
+                            </button>
+                            <button class="action-btn" title="إلغاء">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

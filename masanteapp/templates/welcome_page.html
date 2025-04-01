@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماصنتي - إدارة الرعاية الصحية المتميزة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'welcome_page.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="/static/masante.png" alt="شعار ماصنتي">
+                    <h1>صحتي</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">المميزات</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline">تسجيل الدخول</a>
+                    <a href="#" class="btn btn-primary">ابدأ الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="hero-content">
+                <h2>غيّر تجربتك في <span>الرعاية الصحية</span></h2>
+                <p>توفر ماصنتي منصة آمنة ومبسطة لإدارة سجلاتك الصحية ومواعيدك واحتياجاتك الطبية في مكان واحد. اختبر
+                    الرعاية الصحية كما يجب أن تكون.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">ابدأ رحلتك <i class="fas fa-arrow-left"></i></a>
+                    <a href="#" class="btn btn-outline">شاهد العرض التوضيحي <i class="fas fa-play"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/static/R.jpeg" alt="لوحة معلومات الرعاية الصحية" class="floating">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h3>لماذا تختار <span style="color: var(--primary);">صحتي</span></h3>
+                <p>اكتشف مزايا نظام إدارة الرعاية الصحية المتميز المصمم خصيصًا لتلبية احتياجاتك.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>جدولة سهلة</h4>
+                    <p>احجز مواعيد مع مقدمي الرعاية الصحية بنقرات قليلة. استلم تذكيرات وأدر تقويمك الطبي بسهولة تامة.
+                    </p>
+                    <a href="#">اعرف المزيد <i class="fas fa-chevron-left"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <h4>السجلات الطبية</h4>
+                    <p>الوصول إلى تاريخك الطبي الكامل في أي وقت وأي مكان. شارك معلوماتك الصحية المهمة بشكل آمن مع مقدمي
+                        الرعاية الصحية.</p>
+                    <a href="#">اعرف المزيد <i class="fas fa-chevron-left"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments-dollar"></i>
+                    </div>
+                    <h4>الفواتير والتأمين</h4>
+                    <p>إدارة نفقات الرعاية الصحية الخاصة بك بسهولة. عرض ودفع الفواتير، والتحقق من تغطية التأمين، وتتبع
+                        إنفاقك الطبي.</p>
+                    <a href="#">اعرف المزيد <i class="fas fa-chevron-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <section class="cta">
+            <h3>هل أنت مستعد لتغيير تجربتك في الرعاية الصحية؟</h3>
+            <p>انضم إلى آلاف المستخدمين الراضين الذين اختاروا ماصنتي كحل لإدارة رعايتهم الصحية.</p>
+            <a href="#" class="btn btn-light">ابدأ اليوم <i class="fas fa-arrow-left"></i></a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="/static/masante.png" alt="شعار ماصنتي">
+                        <h2>صحتي</h2>
+                    </div>
+                    <p>نحول إدارة الرعاية الصحية بحلول رقمية مبتكرة للمرضى ومقدمي الخدمات.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>الشركة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                        <li><a href="#">الأخبار والمدونة</a></li>
+                        <li><a href="#">الشركاء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>الدعم</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">مركز المساعدة</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">المجتمع</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>القانونية</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الخدمة</a></li>
+                        <li><a href="#">سياسة ملفات تعريف الارتباط</a></li>
+                        <li><a href="#">الامتثال لقانون HIPAA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 صحتي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.querySelector('.testimonials-slider');
+            const cards = document.querySelectorAll('.testimonial-card');
+            let currentPosition = 0;
+            const cardWidth = cards[0].offsetWidth + 30;
+            function slide() {
+                currentPosition = (currentPosition + 1) % cards.length;
+                slider.style.transition = 'transform 0.5s ease';
+                slider.style.transform = `translateX(${currentPosition * cardWidth}px)`;
+            }
+
+            setInterval(slide, 5000);
+        });
+    </script>
+</body>
+
+</html>

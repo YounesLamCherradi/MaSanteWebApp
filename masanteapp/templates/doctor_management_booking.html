@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحتي - إدارة المرضى</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'doctor_management_booking.css' %}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/static/masante.png" alt="شعار صحتي">
+                <h2>صحتي</h2>
+            </div>
+            <div class="sidebar-user">
+                <img src="/static/R.jpeg" alt="صورة الطبيب">
+                <div class="user-info">
+                    <h3>د. محمد شن</h3>
+                    <p>معرف: MS-1024</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-user-injured"></i>
+                        <span>المرضى</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>المواعيد</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-medical"></i>
+                        <span>السجلات الطبية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-prescription"></i>
+                        <span>الوصفات الطبية</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>إدارة المرضى</h1>
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> إضافة مريض جديد
+                </a>
+            </div>
+
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" class="search-input"
+                        placeholder="بحث عن المرضى بالاسم أو رقم الهوية أو رقم الهاتف...">
+                    <select class="filter">
+                        <option value="">جميع المرضى</option>
+                        <option value="active">المرضى النشطون</option>
+                        <option value="appointment">لديهم مواعيد</option>
+                        <option value="recent">زيارات حديثة</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">بحث</button>
+                </form>
+            </div>
+
+            <div class="patients-section">
+                <div class="section-header">
+                    <h2 class="section-title">قائمة المرضى</h2>
+                    <span class="patient-count">85 مريض</span>
+                </div>
+
+                <div class="patient-list-container">
+                    <table class="patient-list">
+                        <thead>
+                            <tr>
+                                <th>المريض</th>
+                                <th>رقم الهاتف</th>
+                                <th>العمر</th>
+                                <th>آخر زيارة</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">محمد عبدالله</span>
+                                    </div>
+                                </td>
+                                <td>0500123456</td>
+                                <td>45</td>
+                                <td>12 مارس 2025</td>
+                                <td><span class="status-pill status-active">نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">سارة محمد</span>
+                                    </div>
+                                </td>
+                                <td>0511234567</td>
+                                <td>32</td>
+                                <td>10 مارس 2025</td>
+                                <td><span class="status-pill status-active">نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">أحمد علي</span>
+                                    </div>
+                                </td>
+                                <td>0522345678</td>
+                                <td>28</td>
+                                <td>5 مارس 2025</td>
+                                <td><span class="status-pill status-inactive">غير نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">فاطمة حسن</span>
+                                    </div>
+                                </td>
+                                <td>0533456789</td>
+                                <td>52</td>
+                                <td>14 مارس 2025</td>
+                                <td><span class="status-pill status-active">نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">عمر خالد</span>
+                                    </div>
+                                </td>
+                                <td>0544567890</td>
+                                <td>64</td>
+                                <td>8 مارس 2025</td>
+                                <td><span class="status-pill status-active">نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">ليلى إبراهيم</span>
+                                    </div>
+                                </td>
+                                <td>0555678901</td>
+                                <td>36</td>
+                                <td>11 مارس 2025</td>
+                                <td><span class="status-pill status-active">نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">خالد سعيد</span>
+                                    </div>
+                                </td>
+                                <td>0566789012</td>
+                                <td>41</td>
+                                <td>2 مارس 2025</td>
+                                <td><span class="status-pill status-inactive">غير نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">نورة عبدالعزيز</span>
+                                    </div>
+                                </td>
+                                <td>0577890123</td>
+                                <td>27</td>
+                                <td>15 مارس 2025</td>
+                                <td><span class="status-pill status-active">نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">يوسف عمر</span>
+                                    </div>
+                                </td>
+                                <td>0588901234</td>
+                                <td>48</td>
+                                <td>9 مارس 2025</td>
+                                <td><span class="status-pill status-active">نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <img src="/static/R.jpeg" alt="المريض" class="patient-avatar">
+                                        <span class="patient-name">هدى عبدالله</span>
+                                    </div>
+                                </td>
+                                <td>0599012345</td>
+                                <td>55</td>
+                                <td>1 مارس 2025</td>
+                                <td><span class="status-pill status-inactive">غير نشط</span></td>
+                                <td>
+                                    <i class="fas fa-edit patient-action" title="تعديل"></i>
+                                    <i class="fas fa-file-medical patient-action" title="السجل الطبي"></i>
+                                    <i class="fas fa-calendar-plus patient-action" title="إضافة موعد"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.sidebar-menu a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            const searchForm = document.querySelector('.search-form');
+            const searchInput = document.querySelector('.search-input');
+            const patientRows = document.querySelectorAll('.patient-list tbody tr');
+
+            searchForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const searchTerm = searchInput.value.toLowerCase();
+
+                patientRows.forEach(row => {
+                    const patientName = row.querySelector('.patient-name').textContent.toLowerCase();
+                    const phoneNumber = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+
+                    if (patientName.includes(searchTerm) || phoneNumber.includes(searchTerm)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

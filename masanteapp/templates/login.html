@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماصانتي - تسجيل الدخول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="/static/masante.png" alt="شعار ماصانتي">
+                    <h1>صحتي</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">المميزات</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container fadeInUp">
+                <div class="login-form-container">
+                    <div class="login-form-header">
+                        <h3>تسجيل الدخول</h3>
+                        <p>أدخل بيانات الاعتماد للوصول إلى حسابك</p>
+                    </div>
+                    <form action="print" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="form-control" placeholder="name@example.com" required
+                                name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">كلمة المرور</label>
+                            <input type="password" id="password" class="form-control" placeholder="أدخل كلمة المرور"
+                                required name="password">
+                        </div>
+                        <div class="form-options">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember" checked>
+                                <label for="remember">تذكرني</label>
+                            </div>
+                            <a href="#" class="forgot-password">نسيت كلمة المرور؟</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            تسجيل الدخول <i class="fas fa-sign-in-alt"></i>
+                        </button>
+                    </form>
+                    <div class="separator">
+                        <span>أو تابع باستخدام</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="social-btn">
+                            جوجل <i class="fab fa-google" style="color: #DB4437;"></i>
+                        </button>
+                        <button class="social-btn">
+                            أبل <i class="fab fa-apple" style="color: #000;"></i>
+                        </button>
+                    </div>
+                    <div class="register-link">
+                        ليس لديك حساب؟ <a href="#">إنشاء حساب</a>
+                    </div>
+                </div>
+                <div class="login-image">
+                    <div class="login-image-content">
+                        <h2>مرحبًا بعودتك إلى صحتي</h2>
+                        <p>الوصول إلى لوحة تحكم إدارة الرعاية الصحية الخاصة بك ومواصلة رحلتك نحو صحة أفضل.</p>
+                        <ul class="login-benefits">
+                            <li>إدارة مواعيدك <i class="fas fa-check-circle"></i></li>
+                            <li>الوصول إلى سجلاتك الطبية <i class="fas fa-check-circle"></i></li>
+                            <li>التواصل مع مقدمي الرعاية الصحية <i class="fas fa-check-circle"></i></li>
+                            <li>تتبع الأدوية والوصفات الطبية <i class="fas fa-check-circle"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="/static/masante.png" alt="شعار ماصانتي">
+                        <h2>صحتي</h2>
+                    </div>
+                    <p>تحويل إدارة الرعاية الصحية بحلول رقمية مبتكرة للمرضى ومقدمي الخدمات.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>الشركة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                        <li><a href="#">الأخبار والمدونة</a></li>
+                        <li><a href="#">الشركاء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>الدعم</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">مركز المساعدة</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">المجتمع</a></li>
+                        <li><a href="#">الأسئلة المتكررة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>قانوني</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الخدمة</a></li>
+                        <li><a href="#">سياسة ملفات تعريف الارتباط</a></li>
+                        <li><a href="#">الامتثال لـ HIPAA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 صحتي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

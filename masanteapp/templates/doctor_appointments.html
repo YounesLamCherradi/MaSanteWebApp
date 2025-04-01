@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحتي - تحديد المواعيد المتاحة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'doctor_appointments.css' %}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/api/placeholder/30/30" alt="شعار صحتي">
+                <h2>صحتي</h2>
+            </div>
+            <div class="sidebar-user">
+                <img src="/api/placeholder/40/40" alt="صورة الطبيب">
+                <div class="user-info">
+                    <h3>د. محمد شن</h3>
+                    <p>معرف: MS-1024</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-injured"></i>
+                        <span>المرضى</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>المواعيد</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file-medical"></i>
+                        <span>السجلات الطبية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-prescription"></i>
+                        <span>الوصفات الطبية</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>تحديد المواعيد المتاحة</h1>
+            </div>
+
+
+            <div class="form-card">
+                <h2 class="form-title">أضف أوقات متاحة جديدة</h2>
+
+                <form>
+
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>العيادة / المستشفى</label>
+                                <select class="form-control">
+                                    <option value="">اختر العيادة</option>
+                                    <option value="1">عيادة الرحمة</option>
+                                    <option value="2">مستشفى الشفاء</option>
+                                    <option value="3">مركز الصحة الطبي</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>نوع الزيارة</label>
+                                <select class="form-control">
+                                    <option value="">اختر نوع الزيارة</option>
+                                    <option value="checkup">فحص عام</option>
+                                    <option value="follow">متابعة</option>
+                                    <option value="consult">استشارة</option>
+                                    <option value="emergency">طوارئ</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="time-slots">
+
+                        <div class="day-container">
+                            <div class="day-title">اليوم الأول</div>
+                            <div class="form-group">
+                                <label>التاريخ</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="time-input">
+                                <div class="time-range">
+                                    <input type="time" class="form-control" placeholder="من">
+                                    <span>إلى</span>
+                                    <input type="time" class="form-control" placeholder="إلى">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="day-container">
+                            <div class="day-title">اليوم الثاني</div>
+                            <div class="form-group">
+                                <label>التاريخ</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="time-input">
+                                <div class="time-range">
+                                    <input type="time" class="form-control" placeholder="من">
+                                    <span>إلى</span>
+                                    <input type="time" class="form-control" placeholder="إلى">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="day-container">
+                            <div class="day-title">اليوم الثالث</div>
+                            <div class="form-group">
+                                <label>التاريخ</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="time-input">
+                                <div class="time-range">
+                                    <input type="time" class="form-control" placeholder="من">
+                                    <span>إلى</span>
+                                    <input type="time" class="form-control" placeholder="إلى">
+                                </div>
+                            </div>
