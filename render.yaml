@@ -3,7 +3,8 @@ services:
     name: masante-web
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn masante.wsgi:application"
+    startCommand: gunicorn masante.wsgi:application
+
     envVars:
       - key: SECRET_KEY
         sync: false
