@@ -85,7 +85,7 @@ USE_TZ = True
 
 # STATIC FILES
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'masanteapp' / 'static'
 
 # DEFAULT PRIMARY KEY FIELD
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
