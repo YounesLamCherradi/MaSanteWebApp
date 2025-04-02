@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: masante-web
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn masante.wsgi:application"
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: masante.onrender.com
