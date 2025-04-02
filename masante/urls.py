@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 import debug_toolbar
 from django.conf.urls.static import static
+from django.conf import settings
+
 
 
 import masanteapp
